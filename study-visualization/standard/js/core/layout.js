@@ -10,13 +10,13 @@ window.StudienplanLayout = {
 
     const years = Array.from({ length: 6 }, (_, index) => index + 1);
     const layoutHTML =
+      this.renderAssessmentSection() +
       this.renderWahlmoduleSections() +
       `
         <div class="studienplan-hauptbereich">
           ${years.map((year) => this.renderYear(year, groupedModules[year] || {})).join("")}
         </div>
       ` +
-      this.renderAssessmentSection() +
       this.renderProjectSection() +
       this.renderLaborSection() +
       this.renderVertiefungenSections() +

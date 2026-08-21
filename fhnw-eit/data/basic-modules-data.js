@@ -24,6 +24,7 @@ window.StudiengangModules = [
     name: "Allgemeine Elektrotechnik 1",
     ects: 3,
     standardcategory: "Electrical Engineering",
+    isAssessment: true,
     year: 1,
     semester: 1,
   },
@@ -38,6 +39,7 @@ window.StudiengangModules = [
     name: "Objektorientierte Programmierung 1",
     ects: 3,
     standardcategory: "Informatik",
+    isAssessment: true,
     year: 1,
     semester: 1,
   },
@@ -45,6 +47,7 @@ window.StudiengangModules = [
     name: "Analysis 1",
     ects: 3,
     standardcategory: "Mathematik und Naturwissenschaften",
+    isAssessment: true,
     year: 1,
     semester: 1,
   },
@@ -52,6 +55,7 @@ window.StudiengangModules = [
     name: "Lineare Algebra 1",
     ects: 3,
     standardcategory: "Mathematik und Naturwissenschaften",
+    isAssessment: true,
     year: 1,
     semester: 1,
   },
@@ -93,6 +97,7 @@ window.StudiengangModules = [
     name: "Allgemeine Elektrotechnik 2",
     ects: 3,
     standardcategory: "Electrical Engineering",
+    isAssessment: true,
     year: 1,
     semester: 2,
   },
@@ -100,6 +105,7 @@ window.StudiengangModules = [
     name: "Digitaltechnik 1",
     ects: 3,
     standardcategory: "Electrical Engineering",
+    isAssessment: true,
     year: 1,
     semester: 2,
   },
@@ -107,6 +113,7 @@ window.StudiengangModules = [
     name: "Objektorientierte Programmierung 2",
     ects: 3,
     standardcategory: "Informatik",
+    isAssessment: true,
     year: 1,
     semester: 2,
   },
@@ -114,6 +121,7 @@ window.StudiengangModules = [
     name: "Analysis 2",
     ects: 3,
     standardcategory: "Mathematik und Naturwissenschaften",
+    isAssessment: true,
     year: 1,
     semester: 2,
   },
@@ -121,6 +129,7 @@ window.StudiengangModules = [
     name: "Mechanik",
     ects: 3,
     standardcategory: "Mathematik und Naturwissenschaften",
+    isAssessment: true,
     year: 1,
     semester: 2,
   },
@@ -403,3 +412,55 @@ window.StudiengangModules = [
 
   // #endregion 6. Semester
 ];
+
+window.StudiengangAssessmentModules = [
+  {
+    name: "Lineare Algebra 1",
+    standardcategory: "Mathematik und Naturwissenschaften",
+  },
+  { name: "Algebra", standardcategory: "Mathematik und Naturwissenschaften" },
+  {
+    name: "Analysis 1",
+    standardcategory: "Mathematik und Naturwissenschaften",
+  },
+  {
+    name: "Analysis 2",
+    standardcategory: "Mathematik und Naturwissenschaften",
+  },
+  {
+    name: "Wärme und Strahlung",
+    standardcategory: "Mathematik und Naturwissenschaften",
+  },
+  { name: "Mechanik", standardcategory: "Mathematik und Naturwissenschaften" },
+  {
+    name: "Allgemeine Elektrotechnik 1",
+    standardcategory: "Electrical Engineering",
+  },
+  {
+    name: "Allgemeine Elektrotechnik 2",
+    standardcategory: "Electrical Engineering",
+  },
+  { name: "Digitaltechnik 1", standardcategory: "Electrical Engineering" },
+  {
+    name: "Objektorientierte Programmierung 1",
+    standardcategory: "Informatik",
+  },
+  {
+    name: "Objektorientierte Programmierung 2",
+    standardcategory: "Informatik",
+  },
+  { name: "Scientific Python", standardcategory: "Projekte und Labor" },
+  { name: "Hardware Prototyping", standardcategory: "Projekte und Labor" },
+].map((name) => {
+  const module = window.StudiengangModules.find(
+    (item) => item.name === name.name,
+  );
+  return (
+    module || {
+      name: name.name,
+      ects: 3,
+      standardcategory: name.standardcategory,
+      isAssessment: true,
+    }
+  );
+});

@@ -215,6 +215,16 @@ window.StudienplanWahlmodule = {
     );
   },
 
+  isAssessmentModule(module) {
+    if (!module || !module.name) return false;
+
+    if (module.isAssessment) return true;
+
+    return this.getAssessmentModules().some(
+      (assessmentModule) => assessmentModule?.name === module.name,
+    );
+  },
+
   renderAssessmentAssignmentCard(module, assignedSemester) {
     const moduleForRender = {
       ...module,
@@ -893,13 +903,16 @@ window.StudienplanWahlmodule = {
       const selectedModules = currentAssignments.map(
         (assignment) => assignment.module,
       );
+      const eligibleModules = modules.filter(
+        (module) => !this.isAssessmentModule(module),
+      );
       const filteredModules = categoryFilter
-        ? modules.filter(
+        ? eligibleModules.filter(
             (module) =>
               String(module.standardcategory || "").trim() ===
               String(categoryFilter || "").trim(),
           )
-        : modules;
+        : eligibleModules;
 
       if (!filteredModules || filteredModules.length === 0) {
         alert("Keine Wahlmodule gefunden für: " + source);
