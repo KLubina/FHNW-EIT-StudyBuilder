@@ -20,6 +20,7 @@ window.StudienplanLayout = {
       this.renderProjectSection() +
       this.renderLaborSection() +
       this.renderVertiefungenSections() +
+      this.renderFachergaenzungSections() +
       this.renderContextSections();
 
     container.innerHTML = layoutHTML;
@@ -74,10 +75,7 @@ window.StudienplanLayout = {
       title: "Grundlagenlabore",
       category: "Projekte und Labor",
       className: "projekte-labor",
-      minEcts: modules.reduce(
-        (total, module) => total + Number(module.ects || 0),
-        0,
-      ),
+      minEcts: 12,
       source: "labor-modules-data.js",
     });
 
@@ -115,19 +113,43 @@ window.StudienplanLayout = {
 
   renderVertiefungenSections() {
     const sections =
+      window.StudiengangProfilSections ||
       window.FHNWCSAssessmentVertiefungenSections ||
       window.StudiengangVertiefungenSections ||
       [];
     if (!Array.isArray(sections) || sections.length === 0) return "";
 
     const blocks = sections
+      .filter((section) => section.category !== "Fachergänzung")
+      .map((section) => this.renderWahlmoduleSection(section))
+      .join("");
+
+    if (!blocks) return "";
+
+    return `
+            <div class="vertiefungen-bereich">
+                <h3 class="vertiefungen-title">Fachvertiefungen</h3>
+                <div class="vertiefungen-sections">
+                    ${blocks}
+                </div>
+            </div>
+        `;
+  },
+
+  renderFachergaenzungSections() {
+    const sections = (window.StudiengangProfilSections || []).filter(
+      (section) => section.category === "Fachergänzung",
+    );
+    if (sections.length === 0) return "";
+
+    const blocks = sections
       .map((section) => this.renderWahlmoduleSection(section))
       .join("");
 
     return `
-            <div class="vertiefungen-bereich">
-                <h3 class="vertiefungen-title">Vertiefungen und Fachergänzungen</h3>
-                <div class="vertiefungen-sections">
+            <div class="fachergaenzung-bereich">
+                <h3 class="fachergaenzung-title">Fachergänzungen</h3>
+                <div class="fachergaenzung-sections">
                     ${blocks}
                 </div>
             </div>

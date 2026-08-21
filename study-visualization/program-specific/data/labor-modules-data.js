@@ -2,18 +2,19 @@
 
 window.StudiengangLaborModules = [
   {
-    name: "Grundlagenlabor 1",
-    ects: 3,
+    name: "Labor Elektrische Messtechnik",
+    ects: 2,
     standardcategory: "Projekte und Labor",
-    year: 1,
-    semester: 1,
   },
   {
-    name: "Grundlagenlabor 2",
-    ects: 3,
+    name: "Scientific Python",
+    ects: 2,
     standardcategory: "Projekte und Labor",
-    year: 1,
-    semester: 2,
+  },
+  {
+    name: "Hardware Prototyping",
+    ects: 2,
+    standardcategory: "Projekte und Labor",
   },
   {
     name: "Grundlagenlabor 3",

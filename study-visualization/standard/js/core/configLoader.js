@@ -20,11 +20,6 @@ window.StudienplanConfigLoader = {
 
       // Single-program setup: keine zusätzlichen Color-Config-Dateien mehr
 
-      // Lade Modul-Daten
-      // Verwende das standardisierte basic-modules-data.js
-      const dataPath = `${baseProgramPath}/data/basic-modules-data.js`;
-      await this.loadScript(dataPath);
-
       // Lade Wahlmodul-Sektionen falls vorhanden
       const wahlmoduleSectionsPath = `${baseProgramPath}/data/wahlmodule-sections.js`;
       try {
@@ -37,6 +32,13 @@ window.StudienplanConfigLoader = {
       const vertiefungenSectionsPath = `${baseProgramPath}/data/vertiefungen-sections.js`;
       try {
         await this.loadScript(vertiefungenSectionsPath);
+      } catch (e) {
+        // Optional
+      }
+
+      const profileSectionsPath = `${baseProgramPath}/data/profile-sections.js`;
+      try {
+        await this.loadScript(profileSectionsPath);
       } catch (e) {
         // Optional
       }
@@ -91,7 +93,7 @@ window.StudienplanConfigLoader = {
       if (window.StudiengangModules) {
         this.renderStudiengang(window.StudiengangModules, studiengang);
       } else {
-        console.error("Keine Modul-Daten gefunden für:", studiengang);
+        this.renderStudiengang([], studiengang);
       }
     } catch (error) {
       console.error("Fehler beim Laden der Konfiguration:", error);
