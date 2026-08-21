@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "exportedAt": "2026-08-21T21:52:54.206Z",
+  "studiengang": "fhnw-eit",
+  "templates": [
+    {
+      "id": "4d94e81d-9ffd-448a-bc0f-53e722953d85",
+      "name": "Assessment",
+      "updatedAt": "2026-08-21T21:52:51.452Z",
+      "snapshot": {
+        "studienplan:fhnw-eit:color-mode": "standard",
+        "studienplan:fhnw-eit:assessments:assignments": "{\"Lineare Algebra 1\":1,\"Algebra\":2,\"Analysis 1\":1,\"Analysis 2\":2,\"Mechanik\":1,\"Wärme und Strahlung\":2,\"Allgemeine Elektrotechnik 1\":1,\"Allgemeine Elektrotechnik 2\":2,\"Digitaltechnik 1\":1,\"Objektorientierte Programmierung 1\":1,\"Objektorientierte Programmierung 2\":2,\"Scientific Python\":1,\"Hardware Prototyping\":2}"
+      }
+    }
+  ]
+}
