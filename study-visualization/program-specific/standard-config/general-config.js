@@ -10,9 +10,5 @@ window.StudiengangGeneralConfig = {
     <br>
     <a href="https://www.fhnw.ch/de/studium/technik/elektro-und-informationstechnik" target="_blank" rel="noopener">Studiengang-Seite</a>
     <br>
-    <a href="https://www.fhnw.ch/de/studium/technik/media/studienfuhrer-ht-fhnw.pdf/@@download/file" target="_blank" rel="noopener">Studienführer (PDF)</a>
-    <br>
-    <a href="https://www.fhnw.ch/de/studium/technik/elektro-und-informationstechnik/einblick-in-den-studienaufbau" target="_blank" rel="noopener">Curriculum</a>
-    <br>
     <a href="https://issuu.com/fhnw/docs/modultabelle_eit?ff&pageLayout=singlePage" target="_blank" rel="noopener">Alle Module</a>`,
 };
