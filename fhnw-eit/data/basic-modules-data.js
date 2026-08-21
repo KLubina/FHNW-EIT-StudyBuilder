@@ -21,41 +21,9 @@ window.StudiengangModules = [
     semester: 1,
   },
   {
-    name: "Allgemeine Elektrotechnik 1",
-    ects: 3,
-    standardcategory: "Electrical Engineering",
-    isAssessment: true,
-    year: 1,
-    semester: 1,
-  },
-  {
     name: "Konvergenz Elektrotechnik",
     ects: 3,
     standardcategory: "Electrical Engineering",
-    year: 1,
-    semester: 1,
-  },
-  {
-    name: "Objektorientierte Programmierung 1",
-    ects: 3,
-    standardcategory: "Informatik",
-    isAssessment: true,
-    year: 1,
-    semester: 1,
-  },
-  {
-    name: "Analysis 1",
-    ects: 3,
-    standardcategory: "Mathematik und Naturwissenschaften",
-    isAssessment: true,
-    year: 1,
-    semester: 1,
-  },
-  {
-    name: "Lineare Algebra 1",
-    ects: 3,
-    standardcategory: "Mathematik und Naturwissenschaften",
-    isAssessment: true,
     year: 1,
     semester: 1,
   },
@@ -90,46 +58,6 @@ window.StudiengangModules = [
     name: "Grundlagenlabor 2",
     ects: 3,
     standardcategory: "Projekte und Labor",
-    year: 1,
-    semester: 2,
-  },
-  {
-    name: "Allgemeine Elektrotechnik 2",
-    ects: 3,
-    standardcategory: "Electrical Engineering",
-    isAssessment: true,
-    year: 1,
-    semester: 2,
-  },
-  {
-    name: "Digitaltechnik 1",
-    ects: 3,
-    standardcategory: "Electrical Engineering",
-    isAssessment: true,
-    year: 1,
-    semester: 2,
-  },
-  {
-    name: "Objektorientierte Programmierung 2",
-    ects: 3,
-    standardcategory: "Informatik",
-    isAssessment: true,
-    year: 1,
-    semester: 2,
-  },
-  {
-    name: "Analysis 2",
-    ects: 3,
-    standardcategory: "Mathematik und Naturwissenschaften",
-    isAssessment: true,
-    year: 1,
-    semester: 2,
-  },
-  {
-    name: "Mechanik",
-    ects: 3,
-    standardcategory: "Mathematik und Naturwissenschaften",
-    isAssessment: true,
     year: 1,
     semester: 2,
   },
@@ -416,51 +344,73 @@ window.StudiengangModules = [
 window.StudiengangAssessmentModules = [
   {
     name: "Lineare Algebra 1",
+    ects: 3,
     standardcategory: "Mathematik und Naturwissenschaften",
   },
-  { name: "Algebra", standardcategory: "Mathematik und Naturwissenschaften" },
+  {
+    name: "Algebra",
+    ects: 3,
+    standardcategory: "Mathematik und Naturwissenschaften",
+  },
   {
     name: "Analysis 1",
+    ects: 3,
     standardcategory: "Mathematik und Naturwissenschaften",
   },
   {
     name: "Analysis 2",
+    ects: 3,
     standardcategory: "Mathematik und Naturwissenschaften",
   },
   {
     name: "Wärme und Strahlung",
+    ects: 3,
     standardcategory: "Mathematik und Naturwissenschaften",
   },
-  { name: "Mechanik", standardcategory: "Mathematik und Naturwissenschaften" },
+  {
+    name: "Mechanik",
+    ects: 3,
+    standardcategory: "Mathematik und Naturwissenschaften",
+  },
   {
     name: "Allgemeine Elektrotechnik 1",
+    ects: 3,
     standardcategory: "Electrical Engineering",
   },
   {
     name: "Allgemeine Elektrotechnik 2",
+    ects: 3,
     standardcategory: "Electrical Engineering",
   },
-  { name: "Digitaltechnik 1", standardcategory: "Electrical Engineering" },
+  {
+    name: "Digitaltechnik 1",
+    ects: 3,
+    standardcategory: "Electrical Engineering",
+  },
   {
     name: "Objektorientierte Programmierung 1",
+    ects: 3,
     standardcategory: "Informatik",
   },
   {
     name: "Objektorientierte Programmierung 2",
+    ects: 3,
     standardcategory: "Informatik",
   },
-  { name: "Scientific Python", standardcategory: "Projekte und Labor" },
-  { name: "Hardware Prototyping", standardcategory: "Projekte und Labor" },
+  {
+    name: "Scientific Python",
+    ects: 3,
+    standardcategory: "Projekte und Labor",
+  },
+  {
+    name: "Hardware Prototyping",
+    ects: 3,
+    standardcategory: "Projekte und Labor",
+  },
 ].map((name) => {
-  const module = window.StudiengangModules.find(
-    (item) => item.name === name.name,
-  );
-  return (
-    module || {
-      name: name.name,
-      ects: 3,
-      standardcategory: name.standardcategory,
-      isAssessment: true,
-    }
-  );
+  return { ...name, isAssessment: true };
 });
+
+// Der Semesterplan startet leer; die vollständigen Moduldaten bleiben als Katalog verfügbar.
+window.StudiengangModuleCatalog = window.StudiengangModules;
+window.StudiengangModules = [];

@@ -10,13 +10,13 @@ window.StudienplanLayout = {
 
     const years = Array.from({ length: 6 }, (_, index) => index + 1);
     const layoutHTML =
-      this.renderAssessmentSection() +
-      this.renderWahlmoduleSections() +
       `
         <div class="studienplan-hauptbereich">
           ${years.map((year) => this.renderYear(year, groupedModules[year] || {})).join("")}
         </div>
       ` +
+      this.renderAssessmentSection() +
+      this.renderWahlmoduleSections() +
       this.renderProjectSection() +
       this.renderLaborSection() +
       this.renderVertiefungenSections() +
@@ -249,10 +249,15 @@ window.StudienplanLayout = {
 
   // Rendere ein Jahr
   renderYear(year, semesters) {
-    const semesterKeys = [1, 2];
+    const semesterKeys = [year * 2 - 1, year * 2];
     const yearHTML = semesterKeys
-      .map((semester) =>
-        this.renderSemester(year, semester, semesters[semester] || []),
+      .map((semester, index) =>
+        this.renderSemester(
+          year,
+          semester,
+          semesters[semester] || [],
+          index + 1,
+        ),
       )
       .join("");
 
@@ -265,13 +270,13 @@ window.StudienplanLayout = {
   },
 
   // Rendere ein Semester
-  renderSemester(year, semester, modules) {
+  renderSemester(year, semester, modules, semesterPosition = semester) {
     const semesterName =
       semester % 2 === 1 ? "Herbstsemester" : "Frühlingssemester";
     const modulesHTML = window.StudienplanModule.renderSemesterModules(modules);
 
     return `
-            <div class="semester" data-year="${year}" data-semester="${semester}">
+            <div class="semester" data-year="${year}" data-semester="${semesterPosition}">
           <div class="semester-title-row">
             <h4 class="semester-title">${semesterName}</h4>
             <span class="semester-ects-counter">0 ECTS</span>
