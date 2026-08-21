@@ -1,77 +1,55 @@
-/* ==== FHNW BSc INFORMATIK (NUR ASSESSMENT) WAHLMODULE ==== */
+/* ==== FHNW EIT ZUWEISBARE GRUNDMODULE ==== */
+/* Diese Module sind nicht fest an ein Semester gebunden. */
 
-window.FHNWCSAssessmentWahlmoduleData = [
-  // Software Engineering
+window.WahlmoduleData = [
   {
-    name: "Design Patterns",
+    name: "Allgemeine Elektrotechnik 1",
     ects: 3,
-    standardcategory: "Software Engineering",
+    standardcategory: "Electrical Engineering",
   },
   {
-    name: "Verteilte Systeme",
+    name: "Konvergenz Elektrotechnik",
     ects: 3,
-    standardcategory: "Software Engineering",
+    standardcategory: "Electrical Engineering",
   },
   {
-    name: "Software Architektur",
+    name: "Allgemeine Elektrotechnik 2",
     ects: 3,
-    standardcategory: "Software Engineering",
+    standardcategory: "Electrical Engineering",
   },
   {
-    name: "Softwareentwicklungsprozesse",
+    name: "Digitaltechnik 1",
     ects: 3,
-    standardcategory: "Software Engineering",
-  },
-
-  // Systeme
-  { name: "Cloud Computing", ects: 3, standardcategory: "Systeme" },
-  { name: "IT System Management", ects: 3, standardcategory: "Systeme" },
-  { name: "Datennetze", ects: 3, standardcategory: "Systeme" },
-  { name: "Systemprogrammierung", ects: 3, standardcategory: "Systeme" },
-
-  // Programmierung
-  { name: "Web Programming", ects: 3, standardcategory: "Programmierung" },
-  {
-    name: "Functional Programming",
-    ects: 3,
-    standardcategory: "Programmierung",
+    standardcategory: "Electrical Engineering",
   },
   {
-    name: "Concurrent Programming",
+    name: "Objektorientierte Programmierung 1",
     ects: 3,
-    standardcategory: "Programmierung",
-  },
-  { name: "Programmieren in C++", ects: 3, standardcategory: "Programmierung" },
-
-  // Theoretische Grundlagen und Mathematik
-  {
-    name: "Diskrete Stochastik",
-    ects: 3,
-    standardcategory: "Theoretische Grundlagen und Mathematik",
+    standardcategory: "Informatik",
   },
   {
-    name: "Kryptologie",
+    name: "Objektorientierte Programmierung 2",
     ects: 3,
-    standardcategory: "Theoretische Grundlagen und Mathematik",
+    standardcategory: "Informatik",
   },
   {
-    name: "Einführung in die Theoretische Informatik",
+    name: "Analysis 1",
     ects: 3,
-    standardcategory: "Theoretische Grundlagen und Mathematik",
+    standardcategory: "Mathematik und Naturwissenschaften",
   },
   {
-    name: "Mathematik für die Datenkommunikation",
+    name: "Lineare Algebra 1",
     ects: 3,
-    standardcategory: "Theoretische Grundlagen und Mathematik",
+    standardcategory: "Mathematik und Naturwissenschaften",
   },
   {
-    name: "Algorithmen und Datenstrukturen",
+    name: "Analysis 2",
     ects: 3,
-    standardcategory: "Theoretische Grundlagen und Mathematik",
+    standardcategory: "Mathematik und Naturwissenschaften",
   },
   {
-    name: "Einführung in die Analysis",
+    name: "Mechanik",
     ects: 3,
-    standardcategory: "Theoretische Grundlagen und Mathematik",
+    standardcategory: "Mathematik und Naturwissenschaften",
   },
 ];

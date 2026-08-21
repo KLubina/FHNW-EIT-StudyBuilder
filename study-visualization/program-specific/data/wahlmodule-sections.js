@@ -1,31 +1,24 @@
-/* ==== FHNW BSc INFORMATIK (NUR ASSESSMENT) WAHLMODUL-SEKTIONEN ==== */
+/* ==== FHNW EIT ZUWEISBARE GRUNDMODULE - SEKTIONEN ==== */
 
-window.FHNWCSAssessmentWahlmoduleSections = [
+window.StudiengangWahlmoduleSections = [
   {
-    title: "Software Engineering",
-    category: "Software Engineering",
-    className: "software-engineering",
+    title: "Electrical Engineering Grundlagen",
+    category: "Electrical Engineering",
+    className: "ee",
+    minEcts: 12,
+    source: "wahlmodule-data.js",
+  },
+  {
+    title: "Informatik Grundlagen",
+    category: "Informatik",
+    className: "informatik",
     minEcts: 6,
     source: "wahlmodule-data.js",
   },
   {
-    title: "Systeme",
-    category: "Systeme",
-    className: "projekt",
-    minEcts: 6,
-    source: "wahlmodule-data.js",
-  },
-  {
-    title: "Programmierung",
-    category: "Programmierung",
-    className: "programmierung",
-    minEcts: 6,
-    source: "wahlmodule-data.js",
-  },
-  {
-    title: "Theoretische Grundlagen und Mathematik",
-    category: "Theoretische Grundlagen und Mathematik",
-    className: "fachgrundlagen",
+    title: "Mathematik und Naturwissenschaften Grundlagen",
+    category: "Mathematik und Naturwissenschaften",
+    className: "math-nat",
     minEcts: 12,
     source: "wahlmodule-data.js",
   },

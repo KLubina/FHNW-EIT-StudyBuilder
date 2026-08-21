@@ -4,20 +4,15 @@
 window.StudiengangCategoriesConfig = {
   // Category definitions
   kategorien: [
-    { name: "Software Engineering", klasse: "software-engineering" },
-    { name: "Programmierung", klasse: "programmierung" },
-    { name: "Systeme", klasse: "projekt" },
-    {
-      name: "Theoretische Grundlagen und Mathematik",
-      klasse: "fachgrundlagen",
-    },
-    { name: "Vertiefungen", klasse: "vertiefungen" },
-    { name: "Fachergänzungen", klasse: "fachergaenzungen" },
-    { name: "Projekte", klasse: "projekte" },
+    { name: "Mathematik und Naturwissenschaften", klasse: "math-nat" },
+    { name: "Electrical Engineering", klasse: "ee" },
+    { name: "Informatik", klasse: "informatik" },
+    { name: "Fachvertiefung", klasse: "fachvertiefung" },
+    { name: "Fachergänzung", klasse: "fachergaenzung" },
+    { name: "Projekte und Labor", klasse: "projekte-labor" },
     { name: "Kommunikation", klasse: "kommunikation" },
-    { name: "BWL", klasse: "bwl" },
     { name: "Englisch", klasse: "englisch" },
-    { name: "GSW", klasse: "gsw" },
-    { name: "Ergänzungen", klasse: "kontext" },
+    { name: "BWL", klasse: "bwl" },
+    { name: "Geistes- und Sozialwissenschaft", klasse: "gsw" },
   ],
 };

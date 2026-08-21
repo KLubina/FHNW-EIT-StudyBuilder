@@ -10,6 +10,7 @@ window.StudienplanLayout = {
 
     const years = Array.from({ length: 6 }, (_, index) => index + 1);
     const layoutHTML =
+      this.renderWahlmoduleSections() +
       `
         <div class="studienplan-hauptbereich">
           ${years.map((year) => this.renderYear(year, groupedModules[year] || {})).join("")}
@@ -17,7 +18,7 @@ window.StudienplanLayout = {
       ` +
       this.renderAssessmentSection() +
       this.renderProjectSection() +
-      this.renderWahlmoduleSections() +
+      this.renderLaborSection() +
       this.renderVertiefungenSections() +
       this.renderContextSections();
 
@@ -63,6 +64,31 @@ window.StudienplanLayout = {
                 </div>
             </div>
         `;
+  },
+
+  renderLaborSection() {
+    const modules = window.StudiengangLaborModules || [];
+    if (!Array.isArray(modules) || modules.length === 0) return "";
+
+    const section = this.renderWahlmoduleSection({
+      title: "Grundlagenlabore",
+      category: "Projekte und Labor",
+      className: "projekte-labor",
+      minEcts: modules.reduce(
+        (total, module) => total + Number(module.ects || 0),
+        0,
+      ),
+      source: "labor-modules-data.js",
+    });
+
+    return `
+        <div class="wahlmodule-bereich labor-bereich">
+          <h3 class="wahlmodule-title labor-title">Grundlagenlabore</h3>
+          <div class="wahlmodule-sections labor-sections">
+            ${section}
+          </div>
+        </div>
+      `;
   },
 
   renderAssessmentSection() {

@@ -1,18 +1,11 @@
-/* ==== FHNW BSc INFORMATIK (NUR ASSESSMENT) VERTIEFUNGEN/FAECHERGAENZUNGEN-SEKTIONEN ==== */
+/* ==== FHNW EIT FACHVERTIEFUNGS-SEKTIONEN ==== */
 
-window.FHNWCSAssessmentVertiefungenSections = [
+window.StudiengangVertiefungenSections = [
   {
-    title: "Vertiefungen",
-    category: "Vertiefungen",
-    className: "vertiefungen",
-    minEcts: 18,
-    source: "vertiefungen-data.js",
-  },
-  {
-    title: "Fachergänzungen",
-    category: "Fachergänzungen",
-    className: "fachergaenzungen",
-    minEcts: 0,
+    title: "Fachvertiefung Embedded Systems Design",
+    category: "Fachvertiefung",
+    className: "fachvertiefung",
+    minEcts: 27,
     source: "vertiefungen-data.js",
   },
 ];

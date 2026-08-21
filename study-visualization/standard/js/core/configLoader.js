@@ -57,6 +57,14 @@ window.StudienplanConfigLoader = {
         // Optional
       }
 
+      // Lade Grundlagenlabore falls vorhanden
+      const laborModulesPath = `${baseProgramPath}/data/labor-modules-data.js`;
+      try {
+        await this.loadScript(laborModulesPath);
+      } catch (e) {
+        // Optional
+      }
+
       // Major-Minor Legacy Handling:
       // Check if global variable for modules is set after loading.
       // Major-Minor files might define variables ending in 'PflichtmoduleData'.

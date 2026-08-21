@@ -1,40 +1,47 @@
-/* ==== FHNW BSc INFORMATIK (NUR ASSESSMENT) PROJEKTE ==== */
+/* ==== FHNW EIT PROJEKTE ==== */
+/* Feste Projektmodule des Studiengangs */
 
-window.FHNWCSAssessmentProjectModules = [
+window.StudiengangProjectModules = [
   {
     name: "Projekt 1",
     ects: 6,
-    standardcategory: "projekte",
-    orientationRank: 1,
+    standardcategory: "Projekte und Labor",
+    year: 1,
+    semester: 1,
   },
   {
     name: "Projekt 2",
     ects: 6,
-    standardcategory: "projekte",
-    orientationRank: 2,
+    standardcategory: "Projekte und Labor",
+    year: 1,
+    semester: 2,
   },
   {
     name: "Projekt 3",
     ects: 6,
-    standardcategory: "projekte",
-    orientationRank: 3,
+    standardcategory: "Projekte und Labor",
+    year: 2,
+    semester: 3,
   },
   {
     name: "Projekt 4",
     ects: 6,
-    standardcategory: "projekte",
-    orientationRank: 4,
+    standardcategory: "Projekte und Labor",
+    year: 2,
+    semester: 4,
   },
   {
     name: "Projekt 5",
     ects: 6,
-    standardcategory: "projekte",
-    orientationRank: 5,
+    standardcategory: "Projekte und Labor",
+    year: 3,
+    semester: 5,
   },
   {
-    name: "Bachelor-Thesis",
+    name: "Projekt 6",
     ects: 12,
-    standardcategory: "projekte",
-    orientationRank: 6,
+    standardcategory: "Projekte und Labor",
+    year: 3,
+    semester: 6,
   },
 ];

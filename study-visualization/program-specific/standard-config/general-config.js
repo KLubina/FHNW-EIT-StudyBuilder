@@ -3,16 +3,16 @@
 
 window.StudiengangGeneralConfig = {
   // Program identification
-  title: "BSc Informatik - Nur Assessment",
+  title: "BSc Elektro- und Informationstechnik",
 
   // Optional HTML subtitle (renders clickable links when provided)
-  subtitleHtml: `
-    <a href="https://www.fhnw.ch/de/informatik/studium/angebot/studiengaenge/informatik/module-uebersicht" target="_blank" rel="noopener">Modulübersicht</a>
+  subtitleHtml: `<a href="https://www.berufsberatung.ch/dyn/show/4009?id=18617" target="_blank" rel="noopener">Berufsberatung.ch</a>
     <br>
-    <a href="https://www.fhnw.ch/de/informatik/studium/angebot/studiengaenge/informatik/media/modultabelle.pdf/@@display-file/file" target="_blank" rel="noopener">Modultafel Informatik</a>
+    <a href="https://www.fhnw.ch/de/studium/technik/elektro-und-informationstechnik" target="_blank" rel="noopener">Studiengang-Seite</a>
     <br>
-    <a href="https://sgi.pages.fhnw.ch/moduluebersicht/2026fs/" target="_blank" rel="noopener">Modulübersicht FS 2026</a>
+    <a href="https://www.fhnw.ch/de/studium/technik/media/studienfuhrer-ht-fhnw.pdf/@@download/file" target="_blank" rel="noopener">Studienführer (PDF)</a>
     <br>
-    <a href="https://studenthub.technik.fhnw.ch/public/student/-1/studienjahrgang/9820253/studienrichtungId/6002493" target="_blank" rel="noopener">Studentenhub FHNW</a>
-  `,
+    <a href="https://www.fhnw.ch/de/studium/technik/elektro-und-informationstechnik/einblick-in-den-studienaufbau" target="_blank" rel="noopener">Curriculum</a>
+    <br>
+    <a href="https://issuu.com/fhnw/docs/modultabelle_eit?ff&pageLayout=singlePage" target="_blank" rel="noopener">Alle Module</a>`,
 };

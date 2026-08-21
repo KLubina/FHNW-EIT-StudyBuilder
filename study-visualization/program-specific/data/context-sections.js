@@ -1,32 +1,32 @@
-/* ==== FHNW BSc INFORMATIK (NUR ASSESSMENT) KONTEXT-SEKTIONEN ==== */
+/* ==== FHNW EIT KONTEXT-SEKTIONEN ==== */
 
-window.FHNWCSAssessmentContextSections = [
+window.StudiengangContextSections = [
   {
     title: "Kommunikation",
     category: "Kommunikation",
     className: "kommunikation",
-    minEcts: 4,
-    source: "context-modules-data.js",
-  },
-  {
-    title: "BWL",
-    category: "BWL",
-    className: "bwl",
-    minEcts: 4,
+    minEcts: 6,
     source: "context-modules-data.js",
   },
   {
     title: "Englisch",
     category: "Englisch",
     className: "englisch",
-    minEcts: 8,
+    minEcts: 12,
     source: "context-modules-data.js",
   },
   {
-    title: "GSW",
-    category: "GSW",
-    className: "gsw",
+    title: "BWL",
+    category: "BWL",
+    className: "bwl",
     minEcts: 6,
+    source: "context-modules-data.js",
+  },
+  {
+    title: "Geistes- und Sozialwissenschaft",
+    category: "Geistes- und Sozialwissenschaft",
+    className: "gsw",
+    minEcts: 9,
     source: "context-modules-data.js",
   },
 ];

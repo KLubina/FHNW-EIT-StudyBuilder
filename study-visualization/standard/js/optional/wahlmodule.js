@@ -937,9 +937,10 @@ window.StudienplanWahlmodule = {
       script.onload = () => {
         // Mappe Dateinamen zu erwarteten Variablennamen
         const sourceToVarMap = {
-          "wahlmodule-data.js": "FHNWCSAssessmentWahlmoduleData",
-          "vertiefungen-data.js": "FHNWCSAssessmentVertiefungenData",
-          "context-modules-data.js": "FHNWCSAssessmentContextModulesData",
+          "wahlmodule-data.js": "WahlmoduleData",
+          "vertiefungen-data.js": "ITETWahlfaecherData",
+          "context-modules-data.js": "ITETModuleData",
+          "labor-modules-data.js": "StudiengangLaborModules",
           "seminar-data.js": "PolisciSeminarData",
           "vertiefungsmodule-data.js": "PolisciVertiefungsmoduleData",
           "specialisationmodule-data.js": "SpecialisationModuleData",
@@ -965,6 +966,7 @@ window.StudienplanWahlmodule = {
             "ITETModuleData", // Kernfächer
             "ITETWeitereWahlGrundlagenData",
             "ITETPraktikaSeminarProjektData",
+            "StudiengangLaborModules",
             "WahlmoduleData",
           ];
 
