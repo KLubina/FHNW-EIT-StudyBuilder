@@ -1,0 +1,74 @@
+/* ==== FHNW-CS-ASSESSMENT - CSS CLASSES ==== */
+/* Program-specific CSS classes */
+
+[data-studiengang="fhnw-cs-assessment"] .modul.fachgrundlagen,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.fachgrundlagen {
+  background-color: var(--color-fachgrundlagen);
+  color: var(--color-fachgrundlagen-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.vertiefungen,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.vertiefungen {
+  background-color: var(--color-vertiefungen);
+  color: var(--color-vertiefungen-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.programmierung,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.programmierung {
+  background-color: var(--color-programmierung);
+  color: var(--color-programmierung-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.fachergaenzungen,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.fachergaenzungen {
+  background-color: var(--color-fachergaenzungen);
+  color: var(--color-fachergaenzungen-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.projekt,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.projekt {
+  background-color: var(--color-projekt);
+  color: var(--color-projekt-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.software-engineering,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.software-engineering {
+  background-color: var(--color-software-engineering);
+  color: var(--color-software-engineering-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.projekte,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.projekte {
+  background-color: var(--color-projekte);
+  color: var(--color-projekte-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.kommunikation,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.kommunikation {
+  background-color: var(--color-kommunikation);
+  color: var(--color-kommunikation-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.bwl,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.bwl {
+  background-color: var(--color-bwl);
+  color: var(--color-bwl-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.englisch,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.englisch {
+  background-color: var(--color-englisch);
+  color: var(--color-englisch-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.gsw,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.gsw {
+  background-color: var(--color-gsw);
+  color: var(--color-gsw-text, white);
+}
+
+[data-studiengang="fhnw-cs-assessment"] .modul.kontext,
+[data-studiengang="fhnw-cs-assessment"] .legende-item.kontext {
+  background-color: var(--color-kontext);
+  color: var(--color-kontext-text, white);
+}
